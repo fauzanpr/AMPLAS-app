@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,34 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::prefix('admin')->group( function () {
+    Route::get('/', function () {
+        return view('admin.pembatalan', [
+            "title" => "Pembatalan"
+        ]);
+    });
+    Route::get('/pelaporan', function () {
+        return view('admin.pelaporan', [
+            "title" => "Pelaporan"
+        ]);
+    });
+    Route::get('/pembatalan', function () {
+        return view('admin.pembatalan', [
+            "title" => "Pembatalan"
+        ]);
+    });
+    Route::get('/pembayaran', function () {
+        return view('admin.pembayaran', [
+            "title" => "Pembayaran"
+        ]);
+    });
+    Route::get('/pendaftaran', function () {
+        return view('admin.pendaftaran', [
+            "title" => "Pendaftaran"
+        ]);
+    }); 
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
