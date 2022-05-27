@@ -36,12 +36,24 @@ Route::prefix('admin')->group( function () {
             "title" => "Pembayaran"
         ]);
     });
+    Route::get('/pembayaran/detail_pembayaran', function () {
+        return view('admin.detail_pembayaran', [
+            "title" => "Pembayaran"
+        ]);
+    });
     Route::get('/pendaftaran', function () {
         return view('admin.pendaftaran', [
             "title" => "Pendaftaran"
         ]);
     }); 
+    Route::get('/pendaftaran/detail_pendaftaran', function () {
+        return view('admin.detail_pendaftaran', [
+            "title" => "Pendaftaran"
+        ]);
+    });
 });
+
+
 
 Auth::routes();
 
