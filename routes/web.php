@@ -53,7 +53,22 @@ Route::prefix('admin')->group( function () {
     });
 });
 
+Route::prefix('tukang')->group( function () {
+    Route::get('/', function () {
+        return view('tukang.profile_about');
+    });
+    Route::get('/profile_about', function () {
+        return view('tukang.profile_about');
+    });
+    Route::get('/profile_portofolio', function () {
+        return view('tukang.profile_portofolio');
+    });
+    Route::get('/profile_rating', function () {
+        return view('tukang.profile_rating');
+    });
+});
 
+    
 
 Auth::routes();
 
