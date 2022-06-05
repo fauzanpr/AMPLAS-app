@@ -15,6 +15,9 @@
 </head>
 
 <body>
+
+    @include('layouts.partials.navbar')
+
     <div class="container-fluid">
         <div class="container">
             <div class="row height d-flex justify-content-center align-items-center ">
