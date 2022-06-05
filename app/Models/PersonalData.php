@@ -9,8 +9,8 @@ class PersonalData extends Model
 {
     use HasFactory;
 
-    public function account()
+    public function user()
     {
-        return $this->hasOne(Account::class);
+        return $this->hasOne(User::class);
     }
 }

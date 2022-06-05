@@ -9,8 +9,8 @@ class Rating extends Model
 {
     use HasFactory;
 
-    public function account()
+    public function user()
     {
-        return $this->belongsTo(Account::class);
+        return $this->belongsTo(User::class);
     }
 }
