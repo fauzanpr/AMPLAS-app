@@ -68,7 +68,9 @@ Route::prefix('tukang')->group( function () {
     });
 });
 
-    
+    Route::get('/list', function () {
+        return view('list_tukang');
+    });
 
 Auth::routes(['verify' => true]);
 
