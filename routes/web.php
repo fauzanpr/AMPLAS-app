@@ -1,7 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +15,61 @@ use App\Http\Controllers\LoginController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::prefix('admin')->group( function () {
+    Route::get('/', function () {
+        return view('admin.pembatalan', [
+            "title" => "Pembatalan"
+        ]);
+    });
+    Route::get('/pelaporan', function () {
+        return view('admin.pelaporan', [
+            "title" => "Pelaporan"
+        ]);
+    });
+    Route::get('/pembatalan', function () {
+        return view('admin.pembatalan', [
+            "title" => "Pembatalan"
+        ]);
+    });
+    Route::get('/pembayaran', function () {
+        return view('admin.pembayaran', [
+            "title" => "Pembayaran"
+        ]);
+    });
+    Route::get('/pembayaran/detail_pembayaran', function () {
+        return view('admin.detail_pembayaran', [
+            "title" => "Pembayaran"
+        ]);
+    });
+    Route::get('/pendaftaran', function () {
+        return view('admin.pendaftaran', [
+            "title" => "Pendaftaran"
+        ]);
+    }); 
+    Route::get('/pendaftaran/detail_pendaftaran', function () {
+        return view('admin.detail_pendaftaran', [
+            "title" => "Pendaftaran"
+        ]);
+    });
 });
-Route::get('/login', [LoginController::class, 'login'])->name('login');
-// Route::post('actionlogin', [LoginController::class, 'actionlogin'])->name('actionlogin');
+
+Route::prefix('tukang')->group( function () {
+    Route::get('/', function () {
+        return view('tukang.profile_about');
+    });
+    Route::get('/profile_about', function () {
+        return view('tukang.profile_about');
+    });
+    Route::get('/profile_portofolio', function () {
+        return view('tukang.profile_portofolio');
+    });
+    Route::get('/profile_rating', function () {
+        return view('tukang.profile_rating');
+    });
+});
+
+    
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
