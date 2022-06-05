@@ -14,8 +14,8 @@ class Payment extends Model
         return $this->belongsTo(Job::class);
     }
 
-    public function account()
+    public function user()
     {
-        return $this->belongsTo(Account::class);
+        return $this->belongsTo(User::class);
     }
 }

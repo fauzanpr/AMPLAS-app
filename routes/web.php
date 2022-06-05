@@ -72,6 +72,6 @@ Route::prefix('tukang')->group( function () {
         return view('list_tukang');
     });
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
