@@ -39,8 +39,8 @@
                         <div class="form-outline mb-4">
                             <label class="form-label" for="role">Jenis Akun</label>
                             <select name="role" class="form-select form-select-lg">
-                                <option value="1" >Pekerja</option>
-                                <option value="2" >Pelanggan</option>
+                                <option value="2" >Pekerja</option>
+                                <option value="3" >Pengguna</option>
                             </select>                            
                         </div>
 

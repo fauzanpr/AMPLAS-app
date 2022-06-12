@@ -15,12 +15,21 @@ class RoleSeeder extends Seeder
     public function run()
     {
         $roles = [
-            ['role_name' => 'admin'],
-            ['role_name' => 'pekerja'],
-            ['role_name' => 'pelanggan']
+            [
+                'id' => 1,
+                'role_name' => 'admin',
+            ],
+            [
+                'id' => 2,
+                'role_name' => 'pekerja',
+            ],
+            [
+                'id' => 3,
+                'role_name' => 'pengguna',
+            ]
         ];
 
-        Role::create(['role_name' => 'pelanggan']);
+        Role::insert($roles);
 
     }
 }
