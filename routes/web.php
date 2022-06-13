@@ -33,8 +33,18 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
                 "title" => "Pelaporan"
             ]);
         });
+        Route::get('/pelaporan/detail_pelaporan', function () {
+            return view('admin.detail_pelaporan', [
+                "title" => "Pelaporan"
+            ]);
+        });
         Route::get('/pembatalan', function () {
             return view('admin.pembatalan', [
+                "title" => "Pembatalan"
+            ]);
+        });
+        Route::get('/pembatalan/detail_pembatalan', function () {
+            return view('admin.detail_pembatalan', [
                 "title" => "Pembatalan"
             ]);
         });
@@ -48,14 +58,14 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
                 "title" => "Pembayaran"
             ]);
         });
-        Route::get('/pendaftaran', function () {
-            return view('admin.pendaftaran', [
-                "title" => "Pendaftaran"
+        Route::get('/portofolio', function () {
+            return view('admin.portofolio', [
+                "title" => "Portofolio"
             ]);
         }); 
-        Route::get('/pendaftaran/detail_pendaftaran', function () {
-            return view('admin.detail_pendaftaran', [
-                "title" => "Pendaftaran"
+        Route::get('/portofolio/detail_portofolio', function () {
+            return view('admin.detail_portofolio', [
+                "title" => "Portofolio"
             ]);
         });
     });

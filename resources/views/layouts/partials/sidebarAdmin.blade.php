@@ -3,14 +3,11 @@
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex text-dark" href="index.html">
-        <div class="sidebar-brand-icon">
-            <img src="https://asset.kompas.com/crops/SV5q4gPkeD8YJTuzO31BqTr9DEI=/192x128:1728x1152/750x500/data/photo/2021/03/06/60436a28b258b.jpg" class="img-fluid"  alt="...">
-        </div>
-        <div>
-            <div class="mx-4 ">Egar</div>
-            <div class="mx-4">Admin</div>
+        <div class="sidebar-brand-icon ml-5 pl-3">
+            <img src="../../../assets/img/logo-amplas.png" width="75px" class="img-fluid"  alt="...">
         </div>
     </a>
+    <br>
     <br>
 
     <!-- Divider -->
@@ -34,10 +31,10 @@
             <span class="{{ ($title === "Pembayaran" ? 'text-primary' : 'text-dark' ) }}">Pembayaran</span></a>
     </li>
 
-    <!-- Nav Item - Pendaftaran -->
-    <li class="nav-item pl-sm-3 {{ ($title === "Pendaftaran" ? 'active' : '' ) }}">
-        <a class="nav-link " href="/admin/pendaftaran">
-            <span class="{{ ($title === "Pendaftaran" ? 'text-primary' : 'text-dark' ) }}">Pendaftaran</span></a>
+    <!-- Nav Item - portofolio -->
+    <li class="nav-item pl-sm-3 {{ ($title === "Portofolio" ? 'active' : '' ) }}">
+        <a class="nav-link " href="/admin/portofolio">
+            <span class="{{ ($title === "Portofolio" ? 'text-primary' : 'text-dark' ) }}">Portofolio</span></a>
     </li>
 
 
