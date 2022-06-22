@@ -83,7 +83,7 @@
     <div class="d-flex">
         <div class="col-sm-5 mt-3 mr-4">
             <div class="rating-block pb-4">
-                <h4 class="font-weight-bold text-dark">Average user rating</h4>
+                <h4 class="font-weight-bold text-dark">Rata-Rata Penilaian Pengguna</h4>
                 <h2 class="bold padding-bottom-7">4.3 <small>/ 5</small></h2>
                 <button type="button" class="btn btn-primary btn-sm" aria-label="Left Align">
                     <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
@@ -103,7 +103,7 @@
             </div>
         </div>
         <div class="col-sm-5 px-3 pb-3 pt-3">
-            <h4 class="font-weight-bold text-dark">Rating breakdown</h4>
+            <h4 class="font-weight-bold text-dark">Ringkasan Penilaian</h4>
             <div class="pull-left">
                 <div class="pull-left" style="width:35px; line-height:1;">
                     <div style="height:9px; margin:5px 0;">5 <span class="glyphicon glyphicon-star"></span></div>

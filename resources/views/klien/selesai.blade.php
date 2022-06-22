@@ -2,11 +2,9 @@
 @section('container')
 <thead>
     <tr class="bg-primary text-white">
-        <th>Data1</th>
-        <th>Data2</th>
-        <th>Data3</th>
-        <th>Data4</th>
-        <th>Data5</th>
+        <th>Nama Pekerjaan</th>
+        <th>Tanggal Mulai</th>
+        <th>Tanggal Selesai</th>
         <th>Aksi</th>
     </tr>
 </thead>
@@ -15,10 +13,8 @@
         <td>data</td>
         <td>data</td>
         <td>data</td>
-        <td>data</td>
-        <td>data</td>
         <td class="col-sm-3">
-            <a href="#" onClick="confirm_modal_tolak('');" class="btn btn-success col-md-4" role="button">Detail</a>
+            <a href="#"  class="btn btn-success col-md-4" role="button">Detail</a>
         </td>
     </tr>
 </tbody>

@@ -2,15 +2,12 @@
 <ul class="navbar-nav bg-white sidebar sidebar-dark accordion " id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex text-dark" href="index.html">
+    <a class="sidebar-brand d-flex text-dark" href="{{ route('klien.list_tukang') }}" style="margin-left: 35px">
         <div class="sidebar-brand-icon">
-            <img src="https://asset.kompas.com/crops/SV5q4gPkeD8YJTuzO31BqTr9DEI=/192x128:1728x1152/750x500/data/photo/2021/03/06/60436a28b258b.jpg" class="img-fluid" alt="...">
-        </div>
-        <div>
-            <div class="mx-4 ">Adinda</div>
-            <div class="mx-4">Klien</div>
+            <img src="../../assets/img/logo-amplas.png" width="80" height="80" class="d-inline-block align-top ml-3">
         </div>
     </a>
+    <br>
     <br>
 
     <!-- Divider -->

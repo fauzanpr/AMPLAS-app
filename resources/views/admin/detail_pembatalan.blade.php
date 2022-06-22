@@ -1,11 +1,11 @@
 @extends('layouts.adminLayout')
 @section('container')
-<a class="btn btn-success" href="/admin/pembayaran">Kembali</a>
+<a class="btn btn-success" href="/admin/pembatalan">Kembali</a>
 <div class="container">
     <div class="row justify-content-center align-items-center">
         <div class="card" style="width: 70%;">
             <div class="card-header bg-primary text-white">
-                Detail Pembayaran
+                Detail Pembatalan
             </div>
             <div class="card-body">
                 <ul class="list-group list-group-flush">
