@@ -1,7 +1,7 @@
 <nav class="navbar navbar-light bg-light">
     <div class="row d-flex">
         <div class="col-4">
-            <a class="row navbar-brand" href="#">
+            <a class="row navbar-brand" href="{{ route('klien.list_tukang') }}">
                 <img src="../../assets/img/logo-amplas.png" width="50" height="50"
                     class="d-inline-block align-top ml-3">
             </a>

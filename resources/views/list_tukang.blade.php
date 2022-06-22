@@ -30,6 +30,7 @@
             </div>
         </div>
         <div class="row">
+            <a href="{{  route('klien.tukang.about') }}"></a>
             <div class="col-md-3 col-lg-3 item mb-3">
                 <div class="card shadow" style="background-color: #e3e3e3; border: gray 1px;">
                     <div class="pl-3 pb-2 mt-2">

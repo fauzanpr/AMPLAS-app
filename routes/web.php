@@ -87,15 +87,15 @@ Route::middleware(['auth', 'role:pekerja'])->group(function() {
 Route::middleware(['auth', 'role:pengguna'])->group(function() { 
     Route::prefix('klien')->group(function () {
         Route::get('/list-tukang', function () {
-            return view('list_tukang', [
+            return view('klien.list_tukang', [
                 "title" => "Tukang"
             ]);
-        });
+        })->name('klien.list_tukang');
         Route::get('/profile', function () {
             return view('klien.profile', [
                 "title" => "Profil"
             ]);
-        });
+        })->name('klien.profile');
         Route::get('/proses', function () {
             return view('klien.proses', [
                 "title" => "Order Proses"
@@ -105,6 +105,18 @@ Route::middleware(['auth', 'role:pengguna'])->group(function() {
             return view('klien.selesai', [
                 "title" => "Order Selesai"
             ]);
+        });
+        Route::get('/tukang', function () {
+            return view('klien.tukang.profile_about');
+        })->name('klien.tukang.about');
+        Route::get('/tukang/profile_about', function () {
+            return view('klien.tukang.profile_about');
+        });
+        Route::get('/tukang/profile_portofolio', function () {
+            return view('klien.tukang.profile_portofolio');
+        });
+        Route::get('/tukang/profile_rating', function () {
+            return view('klien.tukang.profile_rating');
         });
     });
 });
