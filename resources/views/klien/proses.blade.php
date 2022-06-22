@@ -267,10 +267,10 @@
     <li id="confirm"><strong class="ml-5 pl-4">Pembayaran</strong></li>
 </ul>
 <div align="right" class="mx-5 mb-5 mt-3 px-2">
-    <a href="#" onClick="confirm_modal_tolak('');" class="btn btn-danger col-md-2" style="right:10px; left:9px;"
-        role="button">X</a>
-    <a href="#" onClick="confirm_modal_terima('');" class="btn btn-primary col-md-2" style=" right:10px; left:9px;"
-        role="button">X</a>
+    <a href="#"  class="btn btn-danger col-md-2" style="right:10px; left:9px;"
+        role="button">Batalkan</a>
+    <a href="#" class="btn btn-primary col-md-2" style=" right:10px; left:9px;"
+        role="button">Selesai</a>
 </div>
 <script>
     $(document).ready(function(){

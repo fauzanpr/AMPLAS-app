@@ -8,42 +8,38 @@
                         <h1 class="font-weight-bold">Ingin Mencari Tukang Professional?
                         </h1>
                     </div>
-                    <p class="card-text mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Commodi non
-                        pariatur
-                        numquam animi nam at impedit odit nisi.</p>
-                    <a href="#"
-                        class="btn bg-light text-primary btn-sm btn-block pl-3 pr-3 pt-2 pb-2 w-25 font-weight-bold">Get
-                        Started</a>
+                    <p class="card-text mb-3">AMPLAS merupakan sebuah website yang menyediakan berbagai layanan untuk membantu Anda menemukan tukang yang sesuai untuk berbagai kerusakan perlatan serta kebutuhan lain yang Anda butuhkan.</p>
+                    <a href="{{ route('klien.list_tukang') }}"
+                        class="btn bg-light text-primary btn-sm btn-block pl-3 pr-3 pt-2 pb-2 w-25 font-weight-bold">Cari Tukang</a>
                 </div>
             </div>
             <div class="col-md-2 col-sm-2 col-xs-2 mb-5">
-                <h5 class="heading">Services</h5>
+                <h5 class="heading">Layanan</h5>
                 <ul>
-                    <li class="mb-2">IT Consulting</li>
-                    <li class="mb-2">Development</li>
-                    <li class="mb-2">Cloud</li>
-                    <li class="mb-2">Support</li>
+                    <li class="mb-2">Tukang Air</li>
+                    <li class="mb-2">Tukang Bangunan</li>
+                    <li class="mb-2">Tukang Elektronik</li>
+                    <li class="mb-2">Lainnya</li>
                 </ul>
             </div>
             <div class="col-md-2 col-sm-2 col-xs-2 mb-5">
-                <h5 class="heading">Industries</h5>
+                <h5 class="heading">Industri</h5>
                 <ul class="card-text">
-                    <li class="mb-2">Finance</li>
-                    <li class="mb-2">Public Sector</li>
-                    <li class="mb-2">Smart Office</li>
-                    <li class="mb-2">Retail</li>
-                    <li class="mb-2">Retail</li>
+                    <li class="mb-2">Keuangan</li>
+                    <li class="mb-2">Sektor Publik</li>
+                    <li class="mb-2">Kantor Cerdas</li>
+                    <li class="mb-2">UMKM</li>
+                    <li class="mb-2">Bisnis Retail</li>
                 </ul>
             </div>
             <div class="col-md-2 col-sm-2 col-xs-2 mb-5">
-                <h5 class="heading">Company</h5>
+                <h5 class="heading">Perusahaan</h5>
                 <ul class="card-text">
-                    <li class="mb-2">About Us</li>
+                    <li class="mb-2">Tentang Kami</li>
                     <li class="mb-2">Blog</li>
-                    <li class="mb-2">Contact</li>
-                    <li class="mb-2">Join Us</li>
-                    <li class="mb-2">Join Us</li>
+                    <li class="mb-2">Kontak</li>
+                    <li class="mb-2">Bergabung</li>
+                    <li class="mb-2">dengan Kami</li>
                 </ul>
             </div>
         </div>

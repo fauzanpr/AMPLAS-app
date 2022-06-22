@@ -1,7 +1,7 @@
 @extends('layouts.main_logged_in')
 @section('container')
 <div class="ml-5 mx-5 px-5 py-5">
-    <h3 class="mb-2 text-dark font-weight-bold">About</h3>
+    <h3 class="mb-2 text-dark font-weight-bold">Tentang</h3>
     <div>
         <p class="font-italic mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, sint
             aut. Molestias magni nihil quos totam qui expedita, autem aspernatur minima molestiae corporis
@@ -21,7 +21,7 @@
 </div>
 
 <div class="ml-5 mx-5 px-5 pb-5">
-    <h5 class="mb-3 text-dark font-weight-bold ">Social Media</h5>
+    <h5 class="mb-3 text-dark font-weight-bold ">Sosial Media</h5>
     <div class="social ">
         <i class="fa fa-facebook-official fa-lg mr-2"></i>
         <i class="fa fa-instagram fa-lg mr-2"></i>

@@ -9,6 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <title>Klien | {{ $title }}</title>
 </head>
 
 <body>
@@ -43,16 +44,16 @@
                 <div class="ml-4 p-4 d-flex justify-content-start text-center">
                     <ul class="list-inline mb-0">
                         <li class="list-inline-item">
-                            <a href="/tukang/profile_about"
-                                class="btn btn-outline-primary btn-sm btn-block pl-3 pr-3 pt-3 pb-3 ">About</a>
+                            <a href="{{ route('klien.tukang.about') }}"
+                                class="btn btn-outline-primary btn-sm btn-block pl-3 pr-3 pt-3 pb-3 ">Tentang</a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="/tukang/profile_portofolio"
+                            <a href="{{ route('klien.tukang.portofolio') }}"
                                 class="btn btn-outline-primary btn-sm btn-block pl-3 pr-3 pt-3 pb-3">Portofolio</a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="/tukang/profile_rating"
-                                class="btn btn-outline-primary btn-sm btn-block pl-3 pr-3 pt-3 pb-3">Ratings</a>
+                            <a href="{{ route('klien.tukang.rating') }}"
+                                class="btn btn-outline-primary btn-sm btn-block pl-3 pr-3 pt-3 pb-3">Penilaian</a>
                         </li>
                     </ul>
                 </div>

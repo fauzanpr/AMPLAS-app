@@ -91,33 +91,42 @@ Route::middleware(['auth', 'role:pengguna'])->group(function() {
                 "title" => "Tukang"
             ]);
         })->name('klien.list_tukang');
-        Route::get('/profile', function () {
-            return view('klien.profile', [
-                "title" => "Profil"
+        Route::get('/edit_profile', function () {
+            return view('klien.edit_profile', [
+                "title" => "Edit Profil"
             ]);
-        })->name('klien.profile');
+        })->name('klien.edit_profil');
         Route::get('/proses', function () {
             return view('klien.proses', [
                 "title" => "Order Proses"
             ]);
-        });
+        })->name('klien.order_proses');
         Route::get('/selesai', function () {
             return view('klien.selesai', [
                 "title" => "Order Selesai"
             ]);
-        });
-        Route::get('/tukang', function () {
-            return view('klien.tukang.profile_about');
-        })->name('klien.tukang.about');
+        })->name('klien.order_selesai');
+        
+        Route::get('/profile', function () {
+            return view('klien.profile', [
+                "title" => "Profile"
+            ]);
+        })->name('klien.profile');
         Route::get('/tukang/profile_about', function () {
-            return view('klien.tukang.profile_about');
-        });
+            return view('klien.tukang.profile_about', [
+                "title" => "Tukang Profil"
+            ]);
+        })->name('klien.tukang.about');
         Route::get('/tukang/profile_portofolio', function () {
-            return view('klien.tukang.profile_portofolio');
-        });
+            return view('klien.tukang.profile_portofolio', [
+                "title" => "Tukang Portofolio"
+            ]);
+        })->name('klien.tukang.portofolio');
         Route::get('/tukang/profile_rating', function () {
-            return view('klien.tukang.profile_rating');
-        });
+            return view('klien.tukang.profile_rating', [
+                "title" => "Tukang Rating"
+            ]);
+        })->name('klien.tukang.rating');
     });
 });
 
