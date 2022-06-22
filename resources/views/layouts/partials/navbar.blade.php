@@ -6,7 +6,7 @@
                     class="d-inline-block align-top ml-3">
             </a>
         </div>
-        <a class="col-4 d-flex text-dark" style="text-decoration: none;" href="#">
+        <a class="col-4 d-flex text-dark" style="text-decoration: none;" href="{{ route('klien.profile') }}">
             <h5 class="mt-3 mr-4" style="margin-left: 800px;">Supriyadi</h5>
             <img src="../../assets/img/1.jpg" width="50" height="50"
                 class="mt-1 rounded-circle d-inline-block align-top">

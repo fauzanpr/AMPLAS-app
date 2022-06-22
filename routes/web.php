@@ -15,10 +15,6 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', function () {
-    return view('list_tukang');
-});
-
 Route::post('logout', [LoginController::class, 'logout']);
 
 Route::middleware(['auth', 'role:admin'])->group(function () {
@@ -88,9 +84,29 @@ Route::middleware(['auth', 'role:pekerja'])->group(function() {
     });
 });
 
-
-Route::get('/list-tukang', function () {
-    return view('list_tukang');
+Route::middleware(['auth', 'role:pengguna'])->group(function() { 
+    Route::prefix('klien')->group(function () {
+        Route::get('/list-tukang', function () {
+            return view('list_tukang', [
+                "title" => "Tukang"
+            ]);
+        });
+        Route::get('/profile', function () {
+            return view('klien.profile', [
+                "title" => "Profil"
+            ]);
+        });
+        Route::get('/proses', function () {
+            return view('klien.proses', [
+                "title" => "Order Proses"
+            ]);
+        });
+        Route::get('/selesai', function () {
+            return view('klien.selesai', [
+                "title" => "Order Selesai"
+            ]);
+        });
+    });
 });
 
 Auth::routes(['verify' => true]);
