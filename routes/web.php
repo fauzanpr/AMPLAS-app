@@ -15,7 +15,7 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::prefix('admin')->group( function () {
+Route::prefix('admin')->group(function () {
     Route::get('/', function () {
         return view('admin.pembatalan', [
             "title" => "Pembatalan"
@@ -45,7 +45,7 @@ Route::prefix('admin')->group( function () {
         return view('admin.pendaftaran', [
             "title" => "Pendaftaran"
         ]);
-    }); 
+    });
     Route::get('/pendaftaran/detail_pendaftaran', function () {
         return view('admin.detail_pendaftaran', [
             "title" => "Pendaftaran"
@@ -53,7 +53,7 @@ Route::prefix('admin')->group( function () {
     });
 });
 
-Route::prefix('tukang')->group( function () {
+Route::prefix('tukang')->group(function () {
     Route::get('/', function () {
         return view('tukang.profile_about');
     });
@@ -68,9 +68,27 @@ Route::prefix('tukang')->group( function () {
     });
 });
 
-    Route::get('/list', function () {
-        return view('list_tukang');
+Route::prefix('klien')->group(function () {
+    Route::get('/profil', function () {
+        return view('klien.profile', [
+            "title" => "Profil"
+        ]);
     });
+    Route::get('/proses', function () {
+        return view('klien.proses', [
+            "title" => "Order Proses"
+        ]);
+    });
+    Route::get('/selesai', function () {
+        return view('klien.selesai', [
+            "title" => "Order Selesai"
+        ]);
+    });
+});
+
+Route::get('/list', function () {
+    return view('list_tukang');
+});
 
 Auth::routes(['verify' => true]);
 
