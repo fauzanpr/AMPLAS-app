@@ -4,10 +4,21 @@
     <link href="../../assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
     <link href="../../assets/css/tukang-profile.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <nav class="navbar navbar-light bg-light">
+    <div class="row d-flex">
+        <div class="col-4">
+            <a class="row navbar-brand" href="#">
+                <img src="../../assets/img/logo-amplas.png" width="50" height="50"
+                    class="d-inline-block align-top ml-3">
+            </a>
+        </div>
+    </div>
+</nav>
 </head>
 
-<body>
-    <div>
+<body id="page-top">
+    <div id="wrapper">
+        @include('tukang.sidebar')
         <div>
             <!-- Profile widget -->
             <div class="bg-white overflow-hidden">
@@ -53,7 +64,6 @@
 
                 @yield('container')
 
-                @include('layouts.partials.footer')
             </div>
         </div>
 </body>

@@ -55,16 +55,39 @@ Route::prefix('admin')->group(function () {
 
 Route::prefix('tukang')->group(function () {
     Route::get('/', function () {
-        return view('tukang.profile_about');
+        return view('tukang.jobMasuk', [
+            "title" => "Job Masuk"
+        ]);
     });
     Route::get('/profile_about', function () {
-        return view('tukang.profile_about');
+        return view('tukang.profile_about', [
+            "title" => "Profile About"
+        ]);
     });
     Route::get('/profile_portofolio', function () {
-        return view('tukang.profile_portofolio');
+        return view('tukang.profile_portofolio', [
+            "title" => "Profile Portofolio"
+        ]);
     });
     Route::get('/profile_rating', function () {
-        return view('tukang.profile_rating');
+        return view('tukang.profile_rating', [
+            "title" => "Profile Rating"
+        ]);
+    });   
+    Route::get('/profile', function () {
+        return view('tukang.profile', [
+            "title" => "Profile"
+        ]);
+    });
+    Route::get('/jobMasuk', function () {
+        return view('tukang.jobMasuk', [
+            "title" => "Job Masuk"
+        ]);
+    });
+    Route::get('/jobTerselesaikan', function () {
+        return view('tukang.jobTerselesaikan', [
+            "title" => "Job Terselesaikan"
+        ]);
     });
 });
 
