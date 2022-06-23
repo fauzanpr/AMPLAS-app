@@ -5,14 +5,23 @@
     <div class="container-fluid">
         <div class="row mt-4">
             <div class="col-sm-6 text-black">
+                <div class="px-5 ms-xl-4 mt-2">
+                    @if(Session::has('error'))
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            {{ Session::get('error')}}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    @elseif(Session::has('success'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            {{ Session::get('success')}}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    @endif
+                </div>
                 <div class="px-5 ms-xl-4 mt-5">
                     <span class="h1 fw-bold mb-0">Masuk</span>
                 </div>
-                @if(Session::has('error'))
-                    <div class="alert alert-danger">
-                    {{ Session::get('error')}}
-                    </div>
-                @endif
+
                 <div class="px-5 ms-xl-4 mt-2">
                     <p>Belum punya akun? <a href="{{ route('register') }}" class="link-info">Registrasi</a></p>
                 </div>

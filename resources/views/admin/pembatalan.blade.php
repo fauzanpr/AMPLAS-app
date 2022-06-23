@@ -12,8 +12,9 @@
 @endif
 <thead>
     <tr class="bg-primary text-white">
-        <th>Pembatalan</th>
-        <th>Job</th>
+        <th class="col-md-2">ID Job</th>
+        <th class="col-md-2">ID Tukang</th>
+        <th class="col-md-2">ID Klien</th>
         <th>Aksi</th>
     </tr>
 </thead>
@@ -21,9 +22,11 @@
     <tr>
         <td>data</td>
         <td>data</td>
-        <td class="col-sm-3">
-            <a href="#" onClick="confirm_modal_tolak('');" class="btn btn-danger col-md-4" role="button">Tolak</a>
-            <a href="#" onClick="confirm_modal_terima('');" class="btn btn-primary col-md-4" role="button">Terima</a>
+        <td>data</td>
+        <td>
+            <a class="btn btn-warning col-md-3" href="/admin/pembatalan/detail_pembatalan" role="button">Detail</a>
+            <a href="#" onClick="confirm_modal_tolak('');" class="btn btn-danger col-md-3" role="button">Tolak</a>
+            <a href="#" onClick="confirm_modal_terima('');" class="btn btn-primary col-md-3" role="button">Terima</a>
         </td>
     </tr>
 </tbody>

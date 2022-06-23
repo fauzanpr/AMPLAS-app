@@ -12,20 +12,19 @@
 @endif
 <thead>
     <tr class="bg-primary text-white">
-        <th>Pendaftaran</th>
-        <th>User</th>
+        <th>ID User</th>
+        <th>Nama Portofolio</th>
         <th>Aksi</th>
     </tr>
 </thead>
 <tbody>
     <tr>
         <td>data</td>
+        <td>data</td>
         <td>
-            <a class="btn btn-warning col-md-4" href="/admin/pendaftaran/detail_pendaftaran" role="button">Detail</a>
-        </td>
-        <td class="col-sm-3">
-            <a href="#" onClick="confirm_modal_tolak('');" class="btn btn-danger col-md-4" role="button">Tolak</a>
-            <a href="#" onClick="confirm_modal_terima('');" class="btn btn-primary col-md-4" role="button">Terima</a>
+            <a class="btn btn-warning col-md-3" href="/admin/portofolio/detail_portofolio" role="button">Detail</a>
+            <a href="#" onClick="confirm_modal_tolak('');" class="btn btn-danger col-md-3" role="button">Tolak</a>
+            <a href="#" onClick="confirm_modal_terima('');" class="btn btn-primary col-md-3" role="button">Terima</a>
         </td>
     </tr>
 </tbody>
@@ -35,7 +34,7 @@
     <div class="modal-dialog">
         <div class="modal-content" style="margin-top:100px;">
             <div class="modal-header">
-                <h5 class="modal-title" style="text-align:center;">Anda yakin akan menolak pendaftaran?</h5>
+                <h5 class="modal-title" style="text-align:center;">Anda yakin akan menolak portofolio?</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <div class="modal-footer" style="margin:0px; border-top:0px; text-align:center;">
@@ -51,7 +50,7 @@
     <div class="modal-dialog">
         <div class="modal-content" style="margin-top:100px;">
             <div class="modal-header">
-                <h5 class="modal-title" style="text-align:center;">Anda yakin akan menerima pendaftaran?</h5>
+                <h5 class="modal-title" style="text-align:center;">Anda yakin akan menerima portofolio?</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <div class="modal-footer" style="margin:0px; border-top:0px; text-align:center;">
