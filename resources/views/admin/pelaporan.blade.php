@@ -13,18 +13,23 @@
 <thead>
     <tr class="bg-primary text-white">
         <th>ID User</th>
+        <th>Email User</th>
         <th>Total Pelaporan</th>
         <th>Aksi</th>
     </tr>
 </thead>
 <tbody>
-    <tr>
-        <td>data</td>
-        <td>data</td>
-        <td>
-            <a class="btn btn-warning col-md-6" href="/admin/pelaporan/detail_pelaporan" role="button">Detail</a>
-        </td>
-    </tr>
+    @foreach ($reports as $report)
+        <tr>
+            <td>{{$report[0]->reported_account}}</td>
+            <td>{{$report[0]->reportedAccount->email}}</td>
+            <td>{{count($report)}}</td>
+            <td>
+                <a class="btn btn-warning col-md-6" href="{{route('reports.show', $report[0])}}" role="button">Detail</a>
+            </td>
+        </tr>
+        
+    @endforeach
 </tbody>
 
 <!-- Modal Popup untuk OK-->

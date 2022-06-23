@@ -13,22 +13,26 @@
 <thead>
     <tr class="bg-primary text-white">
         <th class="col-md-2">ID Job</th>
+        <th class="col-md-2">Nama Job</th>
         <th class="col-md-2">ID Tukang</th>
         <th class="col-md-2">ID Klien</th>
         <th>Aksi</th>
     </tr>
 </thead>
 <tbody>
-    <tr>
-        <td>data</td>
-        <td>data</td>
-        <td>data</td>
-        <td>
-            <a class="btn btn-warning col-md-3" href="/admin/pembatalan/detail_pembatalan" role="button">Detail</a>
-            <a href="#" onClick="confirm_modal_tolak('');" class="btn btn-danger col-md-3" role="button">Tolak</a>
-            <a href="#" onClick="confirm_modal_terima('');" class="btn btn-primary col-md-3" role="button">Terima</a>
-        </td>
-    </tr>
+    @foreach ($cancellations as $cancel)
+        <tr>
+            <td>{{ $cancel->id }}</td>
+            <td>{{ $cancel->job_name }}</td>
+            <td>{{ $cancel->artisan_id }}</td>
+            <td>{{ $cancel->client_id }}</td>
+            <td>
+                <a class="btn btn-warning col-md-3" href="{{ route('cancel.detail', ['job' => $cancel]) }}" role="button">Detail</a>
+                <a href="#" onClick="confirm_modal_tolak('/admin/pembatalan/{{$cancel->id}}/3');" class="btn btn-danger col-md-3" role="button">Tolak</a>
+                <a href="#" onClick="confirm_modal_terima('/admin/pembatalan/{{$cancel->id}}/2');" class="btn btn-primary col-md-3" role="button">Terima</a>
+            </td>
+        </tr>
+    @endforeach
 </tbody>
 
 <!-- Modal Popup untuk tolak-->
