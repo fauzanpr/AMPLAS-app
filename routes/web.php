@@ -3,47 +3,31 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use App\Http\Controllers\JobController;
+use App\Http\Controllers\ReportController;
+use App\Http\Controllers\Auth\LoginController;
 
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
+Route::get('/', function () {
+    return view('auth.login');
+})->middleware('guest');
+
 Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::prefix('admin')->group( function () {
-        Route::get('/', function () {
-            return view('admin.pembatalan', [
-                "title" => "Pembatalan"
-            ]);
-        });
-        Route::get('/pelaporan', function () {
-            return view('admin.pelaporan', [
-                "title" => "Pelaporan"
-            ]);
-        });
-        Route::get('/pelaporan/detail_pelaporan', function () {
-            return view('admin.detail_pelaporan', [
-                "title" => "Pelaporan"
-            ]);
-        });
-        Route::get('/pembatalan', function () {
-            return view('admin.pembatalan', [
-                "title" => "Pembatalan"
-            ]);
-        });
-        Route::get('/pembatalan/detail_pembatalan', function () {
-            return view('admin.detail_pembatalan', [
-                "title" => "Pembatalan"
-            ]);
-        });
+        Route::get('/', [JobController::class, 'showCancellations']);
+
+
+        Route::get('/pelaporan', [ReportController::class, 'index'])->name('reports.index');
+
+        Route::get('/pelaporan/detail_pelaporan/{report}', [ReportController::class, 'show'])->name('reports.show');
+
+        Route::get('/pembatalan', [JobController::class, 'showCancellations'])->name('cancel.index');
+
+        Route::get('/pembatalan/detail_pembatalan/{job}', [JobController::class, 'showCancellationsDetail'])->name('cancel.detail');
+        
+        Route::post('/pembatalan/{id}/{status}', [JobController::class, 'updateStatusCancellation'])->name('cancel.update');
+
         Route::get('/pembayaran', function () {
             return view('admin.pembayaran', [
                 "title" => "Pembayaran"
@@ -69,18 +53,47 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 
 Route::middleware(['auth', 'role:pekerja'])->group(function() {  
     Route::prefix('tukang')->group( function () {
-        Route::get('/', function () {
-            return view('tukang.profile_about');
-        });
-        Route::get('/profile_about', function () {
-            return view('tukang.profile_about');
-        });
-        Route::get('/profile_portofolio', function () {
-            return view('tukang.profile_portofolio');
-        });
-        Route::get('/profile_rating', function () {
-            return view('tukang.profile_rating');
-        });
+        Route::get('/edit_profile', function () {
+            return view('tukang.edit_profile', [
+                "title" => "Edit Profil"
+            ]);
+        })->name('tukang.edit_profil');
+        Route::get('/masuk', function () {
+            return view('tukang.jobMasuk', [
+                "title" => "Pekerjaan Proses"
+            ]);
+        })->name('tukang.order_proses');
+        Route::get('/selesai', function () {
+            return view('tukang.jobTerselesaikan', [
+                "title" => "Pekerjaan Selesai"
+            ]);
+        })->name('tukang.order_selesai');
+        Route::get('/detail_job/1', function () {
+            return view('tukang.detail_job', [
+                "title" => "Pekerjaan Detail"
+            ]);
+        })->name('tukang.detail_job');
+        Route::get('/detail_job_masuk/1', function () {
+            return view('tukang.detail_job_masuk', [
+                "title" => "Pekerjaan Masuk"
+            ]);
+        })->name('tukang.detail_job_masuk');
+        Route::get('/portofolio', function () {
+            return view('tukang.portofolio', [
+                "title" => "Portofolio Detail"
+            ]);
+        })->name('tukang.portofolio');
+        Route::get('/detail_portofolio/1', function () {
+            return view('tukang.detail_portofolio', [
+                "title" => "Portofolio Detail"
+            ]);
+        })->name('tukang.detail_portofolio');
+        
+        Route::get('/profile', function () {
+            return view('tukang.profile', [
+                "title" => "Profile"
+            ]);
+        })->name('tukang.profile');
     });
 });
 

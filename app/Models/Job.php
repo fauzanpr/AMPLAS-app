@@ -28,4 +28,9 @@ class Job extends Model
     {
         return $this->hasOne(Payment::class);
     }
+
+    public function users()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

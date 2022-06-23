@@ -115,7 +115,6 @@
 
                 @yield('container')
 
-                @include('layouts.partials.footer')
             </div>
         </div>
 </body>
