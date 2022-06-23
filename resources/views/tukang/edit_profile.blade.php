@@ -1,4 +1,4 @@
-@extends('layouts.klienLayout')
+@extends('layouts.tukangLayout')
 @section('container')
 <div class="container-xl px-4 mt-4">
     <div class="row">
@@ -8,7 +8,8 @@
                 <div class="card-header">Foto Profil</div>
                 <div class="card-body text-center">
                     <!-- Profile picture image-->
-                    <img class="img-account-profile rounded-circle mb-2" width="250px" src="{{ asset('assets/faces/face23.jpg') }}" alt="">
+                    <img class="img-account-profile rounded-circle mb-2" width="250px"
+                        src="{{ asset('assets/faces/face1.jpg') }}" alt="">
                     <!-- Profile picture help block-->
                     <div class="small font-italic text-muted mb-4">JPG or PNG tidak lebih dari 5 MB</div>
                     <!-- Profile picture upload button-->
@@ -21,14 +22,15 @@
             <div class="card mb-4">
                 <div class="card-header">Detail Akun</div>
                 <div class="card-body">
-                    <form href="{{ route('klien.profile') }}">
+                    <form href="{{ route('tukang.profile') }}">
                         <div class="mb-3">
                             <label class="small mb-1" for="name">Nama</label>
                             <input class="form-control" id="name" type="text" placeholder="Masukkan nama anda">
                         </div>
                         <div class="mb-3">
                             <label class="small mb-1" for="date_of_birth">Tanggal Lahir</label>
-                            <input class="form-control" id="date_of_birth" type="date" placeholder="Masukkan tanggal lahir anda">
+                            <input class="form-control" id="date_of_birth" type="date"
+                                placeholder="Masukkan tanggal lahir anda">
                         </div>
                         <div class="mb-3">
                             <label class="small mb-1" for="gender">Jenis Kelamin</label>
@@ -36,7 +38,8 @@
                         </div>
                         <div class="mb-3">
                             <label class="small mb-1" for="last_education">Pendidikan Terakhir</label>
-                            <input class="form-control" id="last_education" type="text" placeholder="Masukkan pendidikan terakhir">
+                            <input class="form-control" id="last_education" type="text"
+                                placeholder="Masukkan pendidikan terakhir">
                         </div>
                         <div class="row gx-3 mb-3">
                             <div class="col-md-6">
@@ -60,9 +63,10 @@
                         </div>
                         <div class="mb-3">
                             <label class="small mb-1" for="phone">Pendidikan Nomor Telepon</label>
-                            <input class="form-control" id="phone" type="text" placeholder="Masukkan pendidikan nomor telepon">
+                            <input class="form-control" id="phone" type="text"
+                                placeholder="Masukkan pendidikan nomor telepon">
                         </div>
-                        <a href="{{ route('klien.profile') }}">
+                        <a href="{{ route('tukang.profile') }}">
                             <button class="btn btn-primary" type="button">Simpan</button>
                         </a>
                     </form>

@@ -3,12 +3,12 @@
 <div class="row" style="width: 80%">
     <div style="width: 80%">
         <div>
-            <img style="margin-left: 55%;" class="rounded" src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="">
+            <img style="margin-left: 55%;" class="rounded" width="300px" src="{{ asset('assets/faces/face23.jpg') }}" alt="">
         </div>
         <table class="table border-bottom">
             <tr>
                 <th>Nama</th>
-                <td>Supriyadi</td>
+                <td>Atmayanti</td>
             </tr>
             <tr>
                 <th>Tanggal Lahir</th>
@@ -16,7 +16,7 @@
             </tr>
             <tr>
                 <th>Jenis Kelamin</th>
-                <td>Laki-laki</td>
+                <td>Perempuan</td>
             </tr>
             <tr>
                 <th>Pendidikan Terakhir</th>

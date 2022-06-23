@@ -84,7 +84,7 @@
         <div class="col-sm-5 mt-3 mr-4">
             <div class="rating-block pb-4">
                 <h4 class="font-weight-bold text-dark">Rata-Rata Penilaian Pengguna</h4>
-                <h2 class="bold padding-bottom-7">4.3 <small>/ 5</small></h2>
+                <h2 class="bold padding-bottom-7">3 <small>/ 5</small></h2>
                 <button type="button" class="btn btn-primary btn-sm" aria-label="Left Align">
                     <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                 </button>
@@ -94,7 +94,7 @@
                 <button type="button" class="btn btn-primary btn-sm" aria-label="Left Align">
                     <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                 </button>
-                <button type="button" class="btn btn-primary btn-sm" aria-label="Left Align">
+                <button type="button" class="btn btn-default btn-sm" aria-label="Left Align">
                     <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                 </button>
                 <button type="button" class="btn btn-default btn-grey btn-sm" aria-label="Left Align">
@@ -110,9 +110,9 @@
                 </div>
                 <div class="pull-left" style="width:180px;">
                     <div class="progress" style="height:9px; margin:8px 0;">
-                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="2"
-                            aria-valuemin="0" aria-valuemax="5" style="width: 90%">
-                            <span class="sr-only">80% Complete (danger)</span>
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0"
+                            aria-valuemin="0" aria-valuemax="5" style="width: 0%">
+                            <span class="sr-only">0% Complete (danger)</span>
                         </div>
                     </div>
                 </div>
@@ -124,13 +124,13 @@
                 </div>
                 <div class="pull-left" style="width:180px;">
                     <div class="progress" style="height:9px; margin:8px 0;">
-                        <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="2"
-                            aria-valuemin="0" aria-valuemax="5" style="width: 80%">
-                            <span class="sr-only">80% Complete (danger)</span>
+                        <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="0"
+                            aria-valuemin="0" aria-valuemax="5" style="width: 25%">
+                            <span class="sr-only">25% Complete (danger)</span>
                         </div>
                     </div>
                 </div>
-                <div class="pull-right" style="margin-left:10px;">0</div>
+                <div class="pull-right" style="margin-left:10px;">1</div>
             </div>
             <div class="pull-left">
                 <div class="pull-left" style="width:35px; line-height:1;">
@@ -139,12 +139,12 @@
                 <div class="pull-left" style="width:180px;">
                     <div class="progress" style="height:9px; margin:8px 0;">
                         <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="2"
-                            aria-valuemin="0" aria-valuemax="5" style="width: 60%">
-                            <span class="sr-only">80% Complete (danger)</span>
+                            aria-valuemin="0" aria-valuemax="5" style="width: 50%">
+                            <span class="sr-only">66% Complete (danger)</span>
                         </div>
                     </div>
                 </div>
-                <div class="pull-right" style="margin-left:10px;">0</div>
+                <div class="pull-right" style="margin-left:10px;">2</div>
             </div>
             <div class="pull-left">
                 <div class="pull-left" style="width:35px; line-height:1;">
@@ -153,12 +153,12 @@
                 <div class="pull-left" style="width:180px;">
                     <div class="progress" style="height:9px; margin:8px 0;">
                         <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="2"
-                            aria-valuemin="0" aria-valuemax="5" style="width: 40%">
-                            <span class="sr-only">80% Complete (danger)</span>
+                            aria-valuemin="0" aria-valuemax="5" style="width: 25%">
+                            <span class="sr-only">25% Complete (danger)</span>
                         </div>
                     </div>
                 </div>
-                <div class="pull-right" style="margin-left:10px;">0</div>
+                <div class="pull-right" style="margin-left:10px;">1</div>
             </div>
             <div class="pull-left">
                 <div class="pull-left" style="width:35px; line-height:1;">
@@ -167,8 +167,8 @@
                 <div class="pull-left" style="width:180px;">
                     <div class="progress" style="height:9px; margin:8px 0;">
                         <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="1"
-                            aria-valuemin="0" aria-valuemax="5" style="width: 20%">
-                            <span class="sr-only">80% Complete (danger)</span>
+                            aria-valuemin="0" aria-valuemax="5" style="width: 0%">
+                            <span class="sr-only">0% Complete (danger)</span>
                         </div>
                     </div>
                 </div>
@@ -187,9 +187,9 @@
             <div class="review-block shadow">
                 <div class="row">
                     <div class="col-sm-2 mx-4">
-                        <img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image" class="img-rounded">
+                        <img src="{{ asset('assets/faces/face21.jpg') }}" class="img-rounded">
                         <div class="review-block-name"><a href="#">Fauzan Pradana</a></div>
-                        <div class="review-block-date">January 29, 2022<br />1 day ago</div>
+                        <div class="review-block-date">June 22, 2022<br />1 day ago</div>
                     </div>
                     <div class="col-sm-9">
                         <div class="review-block-rate">
@@ -210,18 +210,16 @@
                             </button>
                         </div>
                         <div class="review-block-title">Tukang kurang ramah</div>
-                        <div class="review-block-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                            Nisi mollitia ullam optio aliquam iste expedita aperiam atque facilis, reprehenderit sequi
-                            excepturi, consectetur est, similique at voluptates non reiciendis. Blanditiis, accusamus.
+                        <div class="review-block-description">Tukang bekerja dengan baik namun jika dilihat dari segi keramahan, tukang kurang ramah dan cenderung diam ketika ditanya.
                         </div>
                     </div>
                 </div>
                 <hr>
                 <div class="row">
                     <div class="col-sm-2 mx-4">
-                        <img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image" class="img-rounded">
+                        <img src="{{ asset('assets/faces/face24.jpg') }}" class="img-rounded">
                         <div class="review-block-name"><a href="#">Taufik Anwar</a></div>
-                        <div class="review-block-date">January 29, 2022<br />1 day ago</div>
+                        <div class="review-block-date">June 21, 2022<br />2 day ago</div>
                     </div>
                     <div class="col-sm-9">
                         <div class="review-block-rate">
@@ -231,7 +229,7 @@
                             <button type="button" class="btn btn-primary btn-xs" aria-label="Left Align">
                                 <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                             </button>
-                            <button type="button" class="btn btn-primary btn-xs" aria-label="Left Align">
+                            <button type="button" class="btn btn-default btn-xs" aria-label="Left Align">
                                 <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                             </button>
                             <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
@@ -241,19 +239,17 @@
                                 <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                             </button>
                         </div>
-                        <div class="review-block-title">Tukang kurang ramah</div>
-                        <div class="review-block-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                            Nisi mollitia ullam optio aliquam iste expedita aperiam atque facilis, reprehenderit sequi
-                            excepturi, consectetur est, similique at voluptates non reiciendis. Blanditiis, accusamus.
+                        <div class="review-block-title">Tukang kerjanya jelek</div>
+                        <div class="review-block-description">Mesin cuci saya diperbaiki satu minggu yang lalu tapi sekarang sudah rusak lagi. Tukang kerjanya ga baik. Masa udah rusak lagi. Sekarang dichat juga slowrespon. -_-
                         </div>
                     </div>
                 </div>
                 <hr>
                 <div class="row">
                     <div class="col-sm-2 mx-4">
-                        <img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image" class="img-rounded">
+                        <img src="{{ asset('assets/faces/face25.jpg') }}" class="img-rounded">
                         <div class="review-block-name"><a href="#">Daffa Aqila</a></div>
-                        <div class="review-block-date">January 29, 2022<br />1 day ago</div>
+                        <div class="review-block-date">June 21, 2022<br />2 day ago</div>
                     </div>
                     <div class="col-sm-9">
                         <div class="review-block-rate">
@@ -274,9 +270,36 @@
                             </button>
                         </div>
                         <div class="review-block-title">Tukang Kerjanya Rapi</div>
-                        <div class="review-block-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Earum sunt rerum, animi modi dolor architecto ad, eius similique cumque officiis atque at
-                            nisi culpa laudantium! Fugit temporibus vel sunt in!</div>
+                        <div class="review-block-description">Tukang bekerja dengan baik. Baru diorder sorenya langsung datang. Cepet banget benerin AC nya. Semoga sukses selalu buat pak tukangnya.</div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-2 mx-4">
+                        <img src="{{ asset('assets/faces/face23.jpg') }}" class="img-rounded">
+                        <div class="review-block-name"><a href="#">Atmayanti</a></div>
+                        <div class="review-block-date">June 19, 2022<br />4 day ago</div>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="review-block-rate">
+                            <button type="button" class="btn btn-primary btn-xs" aria-label="Left Align">
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="btn btn-primary btn-xs" aria-label="Left Align">
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="btn btn-primary btn-xs" aria-label="Left Align">
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <div class="review-block-title">Tukang lumayan</div>
+                        <div class="review-block-description">Yaa dari segi perbaikan menurutku kurang. Soalnya AC ku jadi bunyi klotak-klotak abis diperbaiki. Tapi gapapa lah tukangnya ganteng jadi gapapa ehehe.</div>
                     </div>
                 </div>
             </div>
@@ -302,7 +325,10 @@
                             <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
                         </div>
                         <div class="comment-area">
-                            <textarea class="form-control" placeholder="Masukkan penilaian anda" rows="4"></textarea>
+                            <textarea class="form-control mb-2" placeholder="Masukkan judul penilaian" rows="1"></textarea>
+                        </div>
+                        <div class="comment-area">
+                            <textarea class="form-control" placeholder="Masukkan deskripsi penilaian anda" rows="4"></textarea>
                         </div>
                         <div class="text-center mt-4 "> <button
                                 class="btn btn-primary send px-5 font-weight-bold">Kirim</button>

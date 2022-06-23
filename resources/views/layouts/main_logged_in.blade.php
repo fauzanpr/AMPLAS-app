@@ -4,23 +4,6 @@
     <link href="../../assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
     <link href="../../assets/css/tukang-profile.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<<<<<<< HEAD
-    <nav class="navbar navbar-light bg-light">
-    <div class="row d-flex">
-        <div class="col-4">
-            <a class="row navbar-brand" href="#">
-                <img src="../../assets/img/logo-amplas.png" width="50" height="50"
-                    class="d-inline-block align-top ml-3">
-            </a>
-        </div>
-    </div>
-</nav>
-</head>
-
-<body id="page-top">
-    <div id="wrapper">
-        @include('tukang.sidebar')
-=======
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -32,18 +15,17 @@
 <body>
     @include('layouts.partials.navbar')
     <div>
->>>>>>> fa3ba0481f3b23ac2db387c72145dfb4b886884a
         <div>
             <!-- Profile widget -->
             <div class="bg-white overflow-hidden">
                 <div class="cover">
                     <div class="media align-items-end profile-head ml-5">
-                        <div class="profile mr-3"><img src="../../assets/img/undraw_profile.svg" alt="..." width="130"
+                        <div class="profile mr-3"><img src="{{ asset('assets/faces/face1.jpg') }}" alt="..." width="130"
                                 class="rounded-circle img-thumbnail"></div>
                         <div class="mb-0 text-white">
-                            <h2 class="mt-0 mb-3">Mark Williams</h2>
-                            <h5 class="mt-3 mb-2 text-dark">Tukang Kayu</h5>
-                            <p class="small mb-4 text-primary">New York</p>
+                            <h2 class="mt-0 mb-3">Angga Syahputra</h2>
+                            <h5 class="mt-3 mb-2 text-dark">Tukang Elektronik</h5>
+                            <p class="small mb-4 text-primary">Nganjuk</p>
                         </div>
                     </div>
                 </div>

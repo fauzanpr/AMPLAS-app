@@ -7,7 +7,7 @@ use App\Http\Controllers\JobController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\Auth\LoginController;
 
-Route::post('logout', [LoginController::class, 'logout']);
+Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/', function () {
     return view('auth.login');
@@ -51,58 +51,49 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     });
 });
 
-Route::prefix('tukang')->group(function () {
-    Route::get('/', function () {
-        return view('tukang.jobMasuk', [
-            "title" => "Job Masuk"
-        ]);
-    });
-    Route::get('/profile_about', function () {
-        return view('tukang.profile_about', [
-            "title" => "Profile About"
-        ]);
-    });
-    Route::get('/profile_portofolio', function () {
-        return view('tukang.profile_portofolio', [
-            "title" => "Profile Portofolio"
-        ]);
-    });
-    Route::get('/profile_rating', function () {
-        return view('tukang.profile_rating', [
-            "title" => "Profile Rating"
-        ]);
-    });   
-    Route::get('/profile', function () {
-        return view('tukang.profile', [
-            "title" => "Profile"
-        ]);
-    });
-    Route::get('/jobMasuk', function () {
-        return view('tukang.jobMasuk', [
-            "title" => "Job Masuk"
-        ]);
-    });
-    Route::get('/jobTerselesaikan', function () {
-        return view('tukang.jobTerselesaikan', [
-            "title" => "Job Terselesaikan"
-        ]);
-    });
-});
-
 Route::middleware(['auth', 'role:pekerja'])->group(function() {  
     Route::prefix('tukang')->group( function () {
-        Route::get('/', function () {
-            return view('tukang.profile_about');
-        });
-        Route::get('/profile_about', function () {
-            return view('tukang.profile_about');
-        });
-        Route::get('/profile_portofolio', function () {
-            return view('tukang.profile_portofolio');
-        });
-        Route::get('/profile_rating', function () {
-            return view('tukang.profile_rating');
-        });
+        Route::get('/edit_profile', function () {
+            return view('tukang.edit_profile', [
+                "title" => "Edit Profil"
+            ]);
+        })->name('tukang.edit_profil');
+        Route::get('/masuk', function () {
+            return view('tukang.jobMasuk', [
+                "title" => "Pekerjaan Proses"
+            ]);
+        })->name('tukang.order_proses');
+        Route::get('/selesai', function () {
+            return view('tukang.jobTerselesaikan', [
+                "title" => "Pekerjaan Selesai"
+            ]);
+        })->name('tukang.order_selesai');
+        Route::get('/detail_job/1', function () {
+            return view('tukang.detail_job', [
+                "title" => "Pekerjaan Detail"
+            ]);
+        })->name('tukang.detail_job');
+        Route::get('/detail_job_masuk/1', function () {
+            return view('tukang.detail_job_masuk', [
+                "title" => "Pekerjaan Masuk"
+            ]);
+        })->name('tukang.detail_job_masuk');
+        Route::get('/portofolio', function () {
+            return view('tukang.portofolio', [
+                "title" => "Portofolio Detail"
+            ]);
+        })->name('tukang.portofolio');
+        Route::get('/detail_portofolio/1', function () {
+            return view('tukang.detail_portofolio', [
+                "title" => "Portofolio Detail"
+            ]);
+        })->name('tukang.detail_portofolio');
+        
+        Route::get('/profile', function () {
+            return view('tukang.profile', [
+                "title" => "Profile"
+            ]);
+        })->name('tukang.profile');
     });
 });
 
@@ -120,14 +111,19 @@ Route::middleware(['auth', 'role:pengguna'])->group(function() {
         })->name('klien.edit_profil');
         Route::get('/proses', function () {
             return view('klien.proses', [
-                "title" => "Order Proses"
+                "title" => "Pekerjaan Proses"
             ]);
         })->name('klien.order_proses');
         Route::get('/selesai', function () {
             return view('klien.selesai', [
-                "title" => "Order Selesai"
+                "title" => "Pekerjaan Selesai"
             ]);
         })->name('klien.order_selesai');
+        Route::get('/detail_job/1', function () {
+            return view('klien.detail_job', [
+                "title" => "Pekerjaan Detail"
+            ]);
+        })->name('klien.detail_job');
         
         Route::get('/profile', function () {
             return view('klien.profile', [
