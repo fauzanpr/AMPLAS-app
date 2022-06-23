@@ -9,8 +9,12 @@ use App\Http\Controllers\Auth\LoginController;
 
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
+Route::get('/register', function () {
+    return view('auth._register');
+})->middleware('guest');
+
 Route::get('/', function () {
-    return view('auth.login');
+    return view('list_tukang');
 })->middleware('guest');
 
 Route::middleware(['auth', 'role:admin'])->group(function () {
