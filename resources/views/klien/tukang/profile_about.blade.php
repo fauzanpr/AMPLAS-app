@@ -3,19 +3,15 @@
 <div class="ml-5 mx-5 px-5 py-5">
     <h3 class="mb-2 text-dark font-weight-bold">Tentang</h3>
     <div>
-        <p class="font-italic mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, sint
-            aut. Molestias magni nihil quos totam qui expedita, autem aspernatur minima molestiae corporis
-            ex soluta accusamus consequuntur cupiditate perferendis temporibus.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga vitae voluptatum eligendi laborum
-            earum possimus quas iste dicta asperiores porro architecto dolorum animi nisi atque quia, culpa,
-            incidunt soluta deleniti?
+        <p class="font-italic mb-0">Saya adalah seorang laki-laki kelahiran Nganjuk, 12 Mei 1999. Saya merupakan lulusan salah satu SMA di Nganjuk, walaupun
+        lulusan SMA tetapi saya memiliki hobi di bidang elektronik dan saya telah mengikuti sertifikasi yang diselenggarakan
+        oleh Samsung Tech Institute pada tahun 2018 setelah lulus SMA selama setahun. Saya juga memiliki pengalaman kerja yaitu
+        pada tahun 2019 sampai tahun 2020 di salah satu konter HP di Nganjuk sebagai tukang servis HP. 
         </p>
-        <p class="font-italic mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, sint
-            aut. Molestias magni nihil quos totam qui expedita, autem aspernatur minima molestiae corporis
-            ex soluta accusamus consequuntur cupiditate perferendis temporibus.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga vitae voluptatum eligendi laborum
-            earum possimus quas iste dicta asperiores porro architecto dolorum animi nisi atque quia, culpa,
-            incidunt soluta deleniti?
+        <p class="font-italic mb-0">Dan pada pertengahan
+        tahun 2020 saya resign dan pindah ke salah satu service center Samsung yang berada di Surabaya sampai dengan saat ini.
+        Namun saat ini saya juga mencoba untuk mencari pengalaman yang baru, akhirnya saya memakai AMPLAS ini untuk menawarkan
+        jasa saya secara online.
         </p>
     </div>
 </div>

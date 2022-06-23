@@ -8,7 +8,7 @@
                 <div class="card-header">Foto Profil</div>
                 <div class="card-body text-center">
                     <!-- Profile picture image-->
-                    <img class="img-account-profile rounded-circle mb-2" width="250px" src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="">
+                    <img class="img-account-profile rounded-circle mb-2" width="250px" src="{{ asset('assets/faces/face23.jpg') }}" alt="">
                     <!-- Profile picture help block-->
                     <div class="small font-italic text-muted mb-4">JPG or PNG tidak lebih dari 5 MB</div>
                     <!-- Profile picture upload button-->
@@ -21,7 +21,7 @@
             <div class="card mb-4">
                 <div class="card-header">Detail Akun</div>
                 <div class="card-body">
-                    <form action="#">
+                    <form href="{{ route('klien.profile') }}">
                         <div class="mb-3">
                             <label class="small mb-1" for="name">Nama</label>
                             <input class="form-control" id="name" type="text" placeholder="Masukkan nama anda">
@@ -62,7 +62,9 @@
                             <label class="small mb-1" for="phone">Pendidikan Nomor Telepon</label>
                             <input class="form-control" id="phone" type="text" placeholder="Masukkan pendidikan nomor telepon">
                         </div>
-                        <button class="btn btn-primary" type="button">Simpan</button>
+                        <a href="{{ route('klien.profile') }}">
+                            <button class="btn btn-primary" type="button">Simpan</button>
+                        </a>
                     </form>
                 </div>
             </div>

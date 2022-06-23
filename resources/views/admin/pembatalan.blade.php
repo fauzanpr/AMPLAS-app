@@ -20,9 +20,29 @@
 </thead>
 <tbody>
     <tr>
-        <td>data</td>
-        <td>data</td>
-        <td>data</td>
+        <td>2</td>
+        <td>2</td>
+        <td>3</td>
+        <td>
+            <a class="btn btn-warning col-md-3" href="/admin/pembatalan/detail_pembatalan" role="button">Detail</a>
+            <a href="#" onClick="confirm_modal_tolak('');" class="btn btn-danger col-md-3" role="button">Tolak</a>
+            <a href="#" onClick="confirm_modal_terima('');" class="btn btn-primary col-md-3" role="button">Terima</a>
+        </td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>2</td>
+        <td>3</td>
+        <td>
+            <a class="btn btn-warning col-md-3" href="/admin/pembatalan/detail_pembatalan" role="button">Detail</a>
+            <a href="#" onClick="confirm_modal_tolak('');" class="btn btn-danger col-md-3" role="button">Tolak</a>
+            <a href="#" onClick="confirm_modal_terima('');" class="btn btn-primary col-md-3" role="button">Terima</a>
+        </td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>1</td>
+        <td>3</td>
         <td>
             <a class="btn btn-warning col-md-3" href="/admin/pembatalan/detail_pembatalan" role="button">Detail</a>
             <a href="#" onClick="confirm_modal_tolak('');" class="btn btn-danger col-md-3" role="button">Tolak</a>

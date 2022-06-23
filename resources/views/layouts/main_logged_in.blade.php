@@ -20,12 +20,12 @@
             <div class="bg-white overflow-hidden">
                 <div class="cover">
                     <div class="media align-items-end profile-head ml-5">
-                        <div class="profile mr-3"><img src="../../assets/img/undraw_profile.svg" alt="..." width="130"
+                        <div class="profile mr-3"><img src="{{ asset('assets/faces/face1.jpg') }}" alt="..." width="130"
                                 class="rounded-circle img-thumbnail"></div>
                         <div class="mb-0 text-white">
-                            <h2 class="mt-0 mb-3">Mark Williams</h2>
-                            <h5 class="mt-3 mb-2 text-dark">Tukang Kayu</h5>
-                            <p class="small mb-4 text-primary">New York</p>
+                            <h2 class="mt-0 mb-3">Angga Syahputra</h2>
+                            <h5 class="mt-3 mb-2 text-dark">Tukang Elektronik</h5>
+                            <p class="small mb-4 text-primary">Nganjuk</p>
                         </div>
                     </div>
                 </div>

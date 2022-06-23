@@ -15,7 +15,7 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::post('logout', [LoginController::class, 'logout']);
+Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::prefix('admin')->group( function () {
@@ -98,14 +98,19 @@ Route::middleware(['auth', 'role:pengguna'])->group(function() {
         })->name('klien.edit_profil');
         Route::get('/proses', function () {
             return view('klien.proses', [
-                "title" => "Order Proses"
+                "title" => "Pekerjaan Proses"
             ]);
         })->name('klien.order_proses');
         Route::get('/selesai', function () {
             return view('klien.selesai', [
-                "title" => "Order Selesai"
+                "title" => "Pekerjaan Selesai"
             ]);
         })->name('klien.order_selesai');
+        Route::get('/detail_job/1', function () {
+            return view('klien.detail_job', [
+                "title" => "Pekerjaan Detail"
+            ]);
+        })->name('klien.detail_job');
         
         Route::get('/profile', function () {
             return view('klien.profile', [

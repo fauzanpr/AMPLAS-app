@@ -19,8 +19,22 @@
 </thead>
 <tbody>
     <tr>
-        <td>data</td>
-        <td>data</td>
+        <td>1</td>
+        <td>4</td>
+        <td>
+            <a class="btn btn-warning col-md-6" href="/admin/pelaporan/detail_pelaporan" role="button">Detail</a>
+        </td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>2</td>
+        <td>
+            <a class="btn btn-warning col-md-6" href="/admin/pelaporan/detail_pelaporan" role="button">Detail</a>
+        </td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>2</td>
         <td>
             <a class="btn btn-warning col-md-6" href="/admin/pelaporan/detail_pelaporan" role="button">Detail</a>
         </td>

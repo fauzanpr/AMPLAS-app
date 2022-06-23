@@ -12,7 +12,7 @@
 @endif
 <thead>
     <tr class="bg-primary text-white">
-        <th class="col-md-2">ID Job</th>
+        <th class="col-md-2">ID Pekerjaan</th>
         <th class="col-md-2">ID Klien</th>
         <th>Tanggal Pembayaran</th>
         <th>Aksi</th>
@@ -20,9 +20,19 @@
 </thead>
 <tbody>
     <tr>
-        <td>data</td>
-        <td>data</td>
-        <td>data</td>
+        <td>1</td>
+        <td>4</td>
+        <td>19/06/2022</td>
+        <td>
+            <a class="btn btn-warning col-md-3" href="/admin/pembayaran/detail_pembayaran" role="button">Detail</a>
+            <a href="#" onClick="confirm_modal_tolak('');" class="btn btn-danger col-md-3" role="button">Tolak</a>
+            <a href="#" onClick="confirm_modal_terima('');" class="btn btn-primary col-md-3" role="button">Terima</a>
+        </td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>2</td>
+        <td>21/06/2022</td>
         <td>
             <a class="btn btn-warning col-md-3" href="/admin/pembayaran/detail_pembayaran" role="button">Detail</a>
             <a href="#" onClick="confirm_modal_tolak('');" class="btn btn-danger col-md-3" role="button">Tolak</a>

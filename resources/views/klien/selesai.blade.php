@@ -10,11 +10,11 @@
 </thead>
 <tbody>
     <tr>
-        <td>data</td>
-        <td>data</td>
-        <td>data</td>
+        <td>AC tidak hidup</td>
+        <td>17/06/2022</td>
+        <td>19/06/2022</td>
         <td class="col-sm-3">
-            <a href="#"  class="btn btn-success col-md-4" role="button">Detail</a>
+            <a href="{{ route('klien.detail_job') }}"  class="btn btn-success col-md-4" role="button">Detail</a>
         </td>
     </tr>
 </tbody>

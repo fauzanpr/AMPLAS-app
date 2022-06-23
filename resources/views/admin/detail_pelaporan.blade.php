@@ -10,20 +10,19 @@
             <div class="card-body">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
-                        <span style="width: 50px; margin-left: 50px"><b>Judul : </b></span>
-                        <span>Data</span>
+                        <span style="width: 50px; margin-left: 50px"><b>ID Akun Terlapor : </b></span>
+                        <span>1</span>
                     </li>
                     <li class="list-group-item">
-                        <span style="width: 50px; margin-left: 50px"><b>Judul : </b></span>
-                        <span>Data</span>
+                        <span style="width: 50px; margin-left: 50px"><b>Jumlah Laporan : </b></span>
+                        <span>4</span>
                     </li>
                     <li class="list-group-item">
-                        <span style="width: 50px; margin-left: 50px"><b>Judul : </b></span>
-                        <span>Data</span>
-                    </li>
-                    <li class="list-group-item">
-                        <span style="width: 50px; margin-left: 50px"><b>Judul : </b></span>
-                        <span>Data</span>
+                        <span style="width: 50px; margin-left: 50px"><b>Jenis Pelaporan : </b></span>
+                        <li style=" margin-left: 110px;">Tidak professional</li>
+                        <li style=" margin-left: 110px;">Pembayaran tidak sesuai</li>
+                        <li style=" margin-left: 110px;">Pelayanan buruk</li>
+                        <li style=" margin-left: 110px;">Penipuan</li>
                     </li>
                 </ul>
             </div>
