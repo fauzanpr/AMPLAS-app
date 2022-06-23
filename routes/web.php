@@ -3,19 +3,13 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use App\Http\Controllers\Auth\LoginController;
 
 Route::post('logout', [LoginController::class, 'logout']);
+
+Route::get('/', function () {
+    return view('auth.login');
+})->middleware('guest');
 
 Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::prefix('admin')->group( function () {
@@ -67,7 +61,6 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     });
 });
 
-<<<<<<< HEAD
 Route::prefix('tukang')->group(function () {
     Route::get('/', function () {
         return view('tukang.jobMasuk', [
@@ -103,7 +96,9 @@ Route::prefix('tukang')->group(function () {
         return view('tukang.jobTerselesaikan', [
             "title" => "Job Terselesaikan"
         ]);
-=======
+    });
+});
+
 Route::middleware(['auth', 'role:pekerja'])->group(function() {  
     Route::prefix('tukang')->group( function () {
         Route::get('/', function () {
@@ -118,7 +113,6 @@ Route::middleware(['auth', 'role:pekerja'])->group(function() {
         Route::get('/profile_rating', function () {
             return view('tukang.profile_rating');
         });
->>>>>>> fa3ba0481f3b23ac2db387c72145dfb4b886884a
     });
 });
 
