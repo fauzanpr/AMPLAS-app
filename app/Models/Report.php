@@ -16,11 +16,11 @@ class Report extends Model
 
     public function reportedAccount()
     {
-        return $this->belongsTo(Account::class, 'reported_account');
+        return $this->belongsTo(User::class, 'reported_account');
     }
 
     public function reporterAccount()
     {
-        return $this->belongsTo(Account::class, 'reporter_account');
+        return $this->belongsTo(User::class, 'reporter_account');
     }
 }

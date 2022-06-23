@@ -3,29 +3,25 @@
 <a class="btn btn-success" href="/admin/pelaporan">Kembali</a>
 <div class="container">
     <div class="row justify-content-center align-items-center">
-        <div class="card" style="width: 70%;">
+        <div class="card">
             <div class="card-header bg-primary text-white">
                 Detail Pelaporan
             </div>
             <div class="card-body">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                        <span style="width: 50px; margin-left: 50px"><b>Judul : </b></span>
-                        <span>Data</span>
-                    </li>
-                    <li class="list-group-item">
-                        <span style="width: 50px; margin-left: 50px"><b>Judul : </b></span>
-                        <span>Data</span>
-                    </li>
-                    <li class="list-group-item">
-                        <span style="width: 50px; margin-left: 50px"><b>Judul : </b></span>
-                        <span>Data</span>
-                    </li>
-                    <li class="list-group-item">
-                        <span style="width: 50px; margin-left: 50px"><b>Judul : </b></span>
-                        <span>Data</span>
-                    </li>
-                </ul>
+                <table class="table table-bordered">
+                    <thead>
+                        <th>Report Type</th>
+                        <th>Jumlah</th>
+                    </thead>
+                    <tbody>
+                        @foreach ($details as $detail)
+                            <tr>
+                                <td><span>{{ $detail[0]->reportType->report_type_name }}</span></td>
+                                <td>{{ count($detail) }}</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

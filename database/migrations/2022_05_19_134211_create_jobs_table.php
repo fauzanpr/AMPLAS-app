@@ -21,6 +21,8 @@ class CreateJobsTable extends Migration
             $table->date('finish_date');
             $table->foreignId('client_id');
             $table->foreignId('artisan_id');
+            $table->integer('status'); // 0 = not cancelled, 1 = on progress, 2 = accepted, 3 = cancelled
+            $table->boolean('cancel');
             $table->timestamps();
         });
     }

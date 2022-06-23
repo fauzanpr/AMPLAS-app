@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\JobController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\Auth\LoginController;
 
 Route::post('logout', [LoginController::class, 'logout']);
@@ -13,31 +15,19 @@ Route::get('/', function () {
 
 Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::prefix('admin')->group( function () {
-        Route::get('/', function () {
-            return view('admin.pembatalan', [
-                "title" => "Pembatalan"
-            ]);
-        });
-        Route::get('/pelaporan', function () {
-            return view('admin.pelaporan', [
-                "title" => "Pelaporan"
-            ]);
-        });
-        Route::get('/pelaporan/detail_pelaporan', function () {
-            return view('admin.detail_pelaporan', [
-                "title" => "Pelaporan"
-            ]);
-        });
-        Route::get('/pembatalan', function () {
-            return view('admin.pembatalan', [
-                "title" => "Pembatalan"
-            ]);
-        });
-        Route::get('/pembatalan/detail_pembatalan', function () {
-            return view('admin.detail_pembatalan', [
-                "title" => "Pembatalan"
-            ]);
-        });
+        Route::get('/', [JobController::class, 'showCancellations']);
+
+
+        Route::get('/pelaporan', [ReportController::class, 'index'])->name('reports.index');
+
+        Route::get('/pelaporan/detail_pelaporan/{report}', [ReportController::class, 'show'])->name('reports.show');
+
+        Route::get('/pembatalan', [JobController::class, 'showCancellations'])->name('cancel.index');
+
+        Route::get('/pembatalan/detail_pembatalan/{job}', [JobController::class, 'showCancellationsDetail'])->name('cancel.detail');
+        
+        Route::post('/pembatalan/{id}/{status}', [JobController::class, 'updateStatusCancellation'])->name('cancel.update');
+
         Route::get('/pembayaran', function () {
             return view('admin.pembayaran', [
                 "title" => "Pembayaran"
