@@ -7,6 +7,7 @@ use App\Http\Controllers\JobController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\Auth\LoginController;
 
+
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/register', function () {
@@ -17,7 +18,7 @@ Route::get('/', function () {
     return view('list_tukang');
 })->middleware('guest');
 
-Route::middleware(['auth', 'role:admin'])->group(function () {
+Route::middleware(['auth'])->group(function () {
     Route::prefix('admin')->group( function () {
         Route::get('/', [JobController::class, 'showCancellations']);
 
@@ -55,8 +56,13 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     });
 });
 
-Route::middleware(['auth', 'role:pekerja'])->group(function() {  
+Route::middleware(['auth'])->group(function() {  
     Route::prefix('tukang')->group( function () {
+        Route::get('/', function () {
+            return view('tukang.jobMasuk', [
+                'title' => 'Tukang'
+            ]);
+        });
         Route::get('/edit_profile', function () {
             return view('tukang.edit_profile', [
                 "title" => "Edit Profil"
@@ -101,11 +107,11 @@ Route::middleware(['auth', 'role:pekerja'])->group(function() {
     });
 });
 
-Route::middleware(['auth', 'role:pengguna'])->group(function() { 
+Route::middleware(['auth'])->group(function() { 
     Route::prefix('klien')->group(function () {
         Route::get('/list-tukang', function () {
             return view('klien.list_tukang', [
-                "title" => "Tukang"
+                "title" => "Tukang",
             ]);
         })->name('klien.list_tukang');
         Route::get('/edit_profile', function () {
