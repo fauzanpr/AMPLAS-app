@@ -4,11 +4,16 @@
 <div class="container">
     <div class="row justify-content-center align-items-center">
         <div class="card">
-            <div class="card-header bg-primary text-white">
-                Detail Pelaporan
-            </div>
             <div class="card-body">
                 <table class="table table-bordered">
+                    <thead>
+                        <th class="bg-primary text-white">
+                            Detail Pelaporan
+                        </th>
+                        <th class="bg-primary text-white">
+                            
+                        </th>
+                    </thead>
                     <thead>
                         <th>Report Type</th>
                         <th>Jumlah</th>

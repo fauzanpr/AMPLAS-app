@@ -3,7 +3,7 @@
 <div class="row" style="width: 80%">
     <div style="width: 80%">
         <div>
-            <img style="margin-left: 55%;" class="rounded" width="300px" src="{{ asset('assets/faces/face1.jpg') }}" alt="">
+            <img style="margin-left: 55%;" class="rounded" width="300px" src="{{ asset('assets/faces/face19.jpg') }}" alt="">
         </div>
         <table class="table border-bottom">
             <tr>

@@ -42,7 +42,7 @@ class LoginController extends Controller
         return '/admin';
         break;
       case 2:
-        return '/tukang';
+        return '/tukang/profile';
         break;
       case 3:
         return '/klien/list-tukang';

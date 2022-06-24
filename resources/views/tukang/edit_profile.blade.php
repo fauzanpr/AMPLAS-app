@@ -9,7 +9,7 @@
                 <div class="card-body text-center">
                     <!-- Profile picture image-->
                     <img class="img-account-profile rounded-circle mb-2" width="250px"
-                        src="{{ asset('assets/faces/face1.jpg') }}" alt="">
+                        src="{{ asset('assets/faces/face19.jpg') }}" alt="">
                     <!-- Profile picture help block-->
                     <div class="small font-italic text-muted mb-4">JPG or PNG tidak lebih dari 5 MB</div>
                     <!-- Profile picture upload button-->
