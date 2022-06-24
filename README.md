@@ -7,7 +7,7 @@ Are You Ready To Be Freelance??
 ### Clone
 Clone this repo using 
 ```
-git clone https://github.com/fauzanpr/suluk-bookstore.git
+git clone https://github.com/fauzanpr/AMPLAS-app.git
 ```
 
 ### Install Composer
