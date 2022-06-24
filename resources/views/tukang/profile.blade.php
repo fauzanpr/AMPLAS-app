@@ -7,6 +7,10 @@
         </div>
         <table class="table border-bottom">
             <tr>
+                <th>NIK</th>
+                <td>3504160809110001</td>
+            </tr>
+            <tr>
                 <th>Nama</th>
                 <td>Angga Syahputra</td>
             </tr>

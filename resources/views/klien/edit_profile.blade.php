@@ -23,6 +23,10 @@
                 <div class="card-body">
                     <form href="{{ route('klien.profile') }}">
                         <div class="mb-3">
+                            <label class="small mb-1" for="name">NIM</label>
+                            <input class="form-control" id="name" type="text" placeholder="Masukkan nomer induk anda">
+                        </div>
+                        <div class="mb-3">
                             <label class="small mb-1" for="name">Nama</label>
                             <input class="form-control" id="name" type="text" placeholder="Masukkan nama anda">
                         </div>

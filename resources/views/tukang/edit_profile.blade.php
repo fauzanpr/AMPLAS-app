@@ -24,6 +24,10 @@
                 <div class="card-body">
                     <form href="{{ route('tukang.profile') }}">
                         <div class="mb-3">
+                            <label class="small mb-1" for="name">NIK</label>
+                            <input class="form-control" id="name" type="text" placeholder="Masukkan nomor induk anda">
+                        </div>
+                        <div class="mb-3">
                             <label class="small mb-1" for="name">Nama</label>
                             <input class="form-control" id="name" type="text" placeholder="Masukkan nama anda">
                         </div>

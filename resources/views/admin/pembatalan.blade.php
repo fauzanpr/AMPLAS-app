@@ -21,17 +21,20 @@
 </thead>
 <tbody>
     @foreach ($cancellations as $cancel)
-        <tr>
-            <td>{{ $cancel->id }}</td>
-            <td>{{ $cancel->job_name }}</td>
-            <td>{{ $cancel->artisan_id }}</td>
-            <td>{{ $cancel->client_id }}</td>
-            <td>
-                <a class="btn btn-warning col-md-3" href="{{ route('cancel.detail', ['job' => $cancel]) }}" role="button">Detail</a>
-                <a href="#" onClick="confirm_modal_tolak('/admin/pembatalan/{{$cancel->id}}/3');" class="btn btn-danger col-md-3" role="button">Tolak</a>
-                <a href="#" onClick="confirm_modal_terima('/admin/pembatalan/{{$cancel->id}}/2');" class="btn btn-primary col-md-3" role="button">Terima</a>
-            </td>
-        </tr>
+    <tr>
+        <td>{{ $cancel->id }}</td>
+        <td>{{ $cancel->job_name }}</td>
+        <td>{{ $cancel->artisan_id }}</td>
+        <td>{{ $cancel->client_id }}</td>
+        <td>
+            <a class="btn btn-warning col-md-3" href="{{ route('cancel.detail', ['job' => $cancel]) }}"
+                role="button">Detail</a>
+            <a href="#" onClick="confirm_modal_tolak('/admin/pembatalan/{{$cancel->id}}/3');"
+                class="btn btn-danger col-md-3" role="button">Tolak</a>
+            <a href="#" onClick="confirm_modal_terima('/admin/pembatalan/{{$cancel->id}}/2');"
+                class="btn btn-primary col-md-3" role="button">Terima</a>
+        </td>
+    </tr>
     @endforeach
 </tbody>
 
@@ -44,8 +47,12 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <div class="modal-footer" style="margin:0px; border-top:0px; text-align:center;">
-                <a href="#" class="btn btn-success btn-sm" id="tolak_link">OK</a>
-                <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancel</button>
+                <form action="" id="tolak_link" method="post">
+                    @csrf
+                    <input type="submit" value="OK">
+                    <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancel</button>
+                </form>
+                {{-- <a href="#" class="btn btn-success btn-sm" id="tolak_link">OK</a> --}}
             </div>
         </div>
     </div>
@@ -60,8 +67,12 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <div class="modal-footer" style="margin:0px; border-top:0px; text-align:center;">
-                <a href="#" class="btn btn-success btn-sm" id="terima_link">OK</a>
-                <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancel</button>
+                <form action="" id="terima_link" method="POST">
+                    @csrf
+                    <input type="submit" value="OK">
+                    <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancel</button>
+                </form>
+
             </div>
         </div>
     </div>
@@ -72,12 +83,12 @@
     function confirm_modal_tolak(tolak_url)
     {
         $('#modal_tolak').modal('show', {backdrop: 'static'});
-        document.getElementById('tolak_link').setAttribute('href' , tolak_url);
+        document.getElementById('tolak_link').setAttribute('action' , tolak_url);
     }
     function confirm_modal_terima(terima_url)
     {
         $('#modal_terima').modal('show', {backdrop: 'static'});
-        document.getElementById('terima_link').setAttribute('href' , terima_url);
+        document.getElementById('terima_link').setAttribute('action' , terima_url);
     }
 </script>
 @endsection
