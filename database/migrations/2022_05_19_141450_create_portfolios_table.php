@@ -15,7 +15,7 @@ class CreatePortfoliosTable extends Migration
     {
         Schema::create('portfolios', function (Blueprint $table) {
             $table->id();
-            $table->string('portfolio_name', 50);
+            $table->string('portfolio_name', 255);
             $table->string('path_to_file', 255);
             $table->foreignId('account_id');
             $table->timestamps();

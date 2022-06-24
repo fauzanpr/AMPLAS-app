@@ -25,7 +25,7 @@ class JobTypeSeeder extends Seeder
                 'name' => 'Mesin'
             ],
             [
-                'name' => 'Bamgunan'
+                'name' => 'Bangunan'
             ]
         ];
 
