@@ -11,29 +11,6 @@
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
                         <span style="width: 50px; margin-left: 50px"><b>ID Job : </b></span>
-<<<<<<< HEAD
-                        <span>2</span>
-                    </li>
-                    <li class="list-group-item">
-                        <span style="width: 50px; margin-left: 50px"><b>ID Tukang : </b></span>
-                        <span>2</span>
-                    </li>
-                    <li class="list-group-item">
-                        <span style="width: 50px; margin-left: 50px"><b>Nama Tukang : </b></span>
-                        <span>Ahmad Kurniawan</span>
-                    </li>
-                    <li class="list-group-item">
-                        <span style="width: 50px; margin-left: 50px"><b>ID Klien : </b></span>
-                        <span>3</span>
-                    </li>
-                    <li class="list-group-item">
-                        <span style="width: 50px; margin-left: 50px"><b>Nama Klien : </b></span>
-                        <span>Daffa Aqila</span>
-                    </li>
-                    <li class="list-group-item">
-                        <span style="width: 50px; margin-left: 50px"><b>Alasan Pembatalan : </b></span>
-                        <span>Tukang tidak merespon dalam waktu yang lama</span>
-=======
                         <span>{{ $cancel->id }}</span>
                     </li>
                     <li class="list-group-item">
@@ -67,7 +44,6 @@
                             Pembatalan Ditolak
                             @endif
                         </span>
->>>>>>> 3763fed8a1371a0e15ab62be84501e18213f608e
                     </li>
                 </ul>
             </div>

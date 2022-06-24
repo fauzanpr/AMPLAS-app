@@ -19,29 +19,6 @@
     </tr>
 </thead>
 <tbody>
-<<<<<<< HEAD
-    <tr>
-        <td>1</td>
-        <td>4</td>
-        <td>
-            <a class="btn btn-warning col-md-6" href="/admin/pelaporan/detail_pelaporan" role="button">Detail</a>
-        </td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>2</td>
-        <td>
-            <a class="btn btn-warning col-md-6" href="/admin/pelaporan/detail_pelaporan" role="button">Detail</a>
-        </td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>2</td>
-        <td>
-            <a class="btn btn-warning col-md-6" href="/admin/pelaporan/detail_pelaporan" role="button">Detail</a>
-        </td>
-    </tr>
-=======
     @foreach ($reports as $report)
         <tr>
             <td>{{$report[0]->reported_account}}</td>
@@ -53,7 +30,6 @@
         </tr>
         
     @endforeach
->>>>>>> 3763fed8a1371a0e15ab62be84501e18213f608e
 </tbody>
 
 <!-- Modal Popup untuk OK-->

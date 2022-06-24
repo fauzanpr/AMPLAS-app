@@ -20,38 +20,6 @@
     </tr>
 </thead>
 <tbody>
-<<<<<<< HEAD
-    <tr>
-        <td>2</td>
-        <td>2</td>
-        <td>3</td>
-        <td>
-            <a class="btn btn-warning col-md-3" href="/admin/pembatalan/detail_pembatalan" role="button">Detail</a>
-            <a href="#" onClick="confirm_modal_tolak('');" class="btn btn-danger col-md-3" role="button">Tolak</a>
-            <a href="#" onClick="confirm_modal_terima('');" class="btn btn-primary col-md-3" role="button">Terima</a>
-        </td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>2</td>
-        <td>3</td>
-        <td>
-            <a class="btn btn-warning col-md-3" href="/admin/pembatalan/detail_pembatalan" role="button">Detail</a>
-            <a href="#" onClick="confirm_modal_tolak('');" class="btn btn-danger col-md-3" role="button">Tolak</a>
-            <a href="#" onClick="confirm_modal_terima('');" class="btn btn-primary col-md-3" role="button">Terima</a>
-        </td>
-    </tr>
-    <tr>
-        <td>5</td>
-        <td>1</td>
-        <td>3</td>
-        <td>
-            <a class="btn btn-warning col-md-3" href="/admin/pembatalan/detail_pembatalan" role="button">Detail</a>
-            <a href="#" onClick="confirm_modal_tolak('');" class="btn btn-danger col-md-3" role="button">Tolak</a>
-            <a href="#" onClick="confirm_modal_terima('');" class="btn btn-primary col-md-3" role="button">Terima</a>
-        </td>
-    </tr>
-=======
     @foreach ($cancellations as $cancel)
         <tr>
             <td>{{ $cancel->id }}</td>
@@ -65,7 +33,6 @@
             </td>
         </tr>
     @endforeach
->>>>>>> 3763fed8a1371a0e15ab62be84501e18213f608e
 </tbody>
 
 <!-- Modal Popup untuk tolak-->

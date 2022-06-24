@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Carbon\Carbon;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
@@ -21,6 +22,7 @@ class UserSeeder extends Seeder
                 'name' => 'Administrator',
                 'email' => 'admin1@amplas.com',
                 'password' => Hash::make('admin1234'),
+                'email_verified_at' => Carbon::now()->toDateTimeString(),
                 'role_id' => 1
             ],
             [
@@ -28,6 +30,7 @@ class UserSeeder extends Seeder
                 'name' => 'Dina Rifa',
                 'email' => 'admin2@amplas.com',
                 'password' => Hash::make('admin1234'),
+                'email_verified_at' => Carbon::now()->toDateTimeString(),
                 'role_id' => 1
             ],
             [
@@ -35,6 +38,7 @@ class UserSeeder extends Seeder
                 'name' => 'Taufik Anwar',
                 'email' => 'taufik@mail.com',
                 'password' => Hash::make('taufik123'),
+                'email_verified_at' => Carbon::now()->toDateTimeString(),
                 'role_id' => 2
             ],
             [
@@ -42,6 +46,7 @@ class UserSeeder extends Seeder
                 'name' => 'Atmayanti',
                 'email' => 'maya@mail.com',
                 'password' => Hash::make('maya1234'),
+                'email_verified_at' => Carbon::now()->toDateTimeString(),
                 'role_id' => 3
             ],
             [
@@ -49,6 +54,7 @@ class UserSeeder extends Seeder
                 'name' => 'Abraham',
                 'email' => 'client1@mail.com',
                 'password' => Hash::make('client1234'),
+                'email_verified_at' => Carbon::now()->toDateTimeString(),
                 'role_id' => 3
             ], 
             [
@@ -56,6 +62,7 @@ class UserSeeder extends Seeder
                 'name' => 'Andy',
                 'email' => 'client2@mail.com',
                 'password' => Hash::make('client1234'),
+                'email_verified_at' => Carbon::now()->toDateTimeString(),
                 'role_id' => 3
             ],
             [
@@ -63,6 +70,7 @@ class UserSeeder extends Seeder
                 'name' => 'Ireena',
                 'email' => 'client3@mail.com',
                 'password' => Hash::make('client1234'),
+                'email_verified_at' => Carbon::now()->toDateTimeString(),
                 'role_id' => 3
             ],
             [
@@ -70,6 +78,7 @@ class UserSeeder extends Seeder
                 'name' => 'Shelby',
                 'email' => 'client4@mail.com',
                 'password' => Hash::make('client1234'),
+                'email_verified_at' => Carbon::now()->toDateTimeString(),
                 'role_id' => 3
             ],
             [
@@ -77,6 +86,7 @@ class UserSeeder extends Seeder
                 'name' => 'Polly',
                 'email' => '`client`5@mail.com',
                 'password' => Hash::make('tukang1234'),
+                'email_verified_at' => Carbon::now()->toDateTimeString(),
                 'role_id' => 3
             ],
             [
@@ -84,6 +94,7 @@ class UserSeeder extends Seeder
                 'name' => 'Sheeza',
                 'email' => 'tukang1@mail.com',
                 'password' => Hash::make('tukang1234'),
+                'email_verified_at' => Carbon::now()->toDateTimeString(),
                 'role_id' => 2
             ],
             [
@@ -91,6 +102,7 @@ class UserSeeder extends Seeder
                 'name' => 'Gragru',
                 'email' => 'tukang2@mail.com',
                 'password' => Hash::make('tukang1234'),
+                'email_verified_at' => Carbon::now()->toDateTimeString(),
                 'role_id' => 2
             ],
             [
@@ -98,6 +110,7 @@ class UserSeeder extends Seeder
                 'name' => 'Reza Pangestu',
                 'email' => 'tukang3@mail.com',
                 'password' => Hash::make('tukang1234'),
+                'email_verified_at' => Carbon::now()->toDateTimeString(),
                 'role_id' => 2
             ],
             [
@@ -105,6 +118,7 @@ class UserSeeder extends Seeder
                 'name' => 'Fanny',
                 'email' => 'tukang6@mail.com',
                 'password' => Hash::make('tukang1234'),
+                'email_verified_at' => Carbon::now()->toDateTimeString(),
                 'role_id' => 2
             ],
             [
@@ -112,6 +126,7 @@ class UserSeeder extends Seeder
                 'name' => 'Prada',
                 'email' => 'tukang4@mail.com',
                 'password' => Hash::make('tukang1234'),
+                'email_verified_at' => Carbon::now()->toDateTimeString(),
                 'role_id' => 2
             ],
             [
@@ -119,6 +134,7 @@ class UserSeeder extends Seeder
                 'name' => 'Faiza',
                 'email' => 'tukang5@mail.com',
                 'password' => Hash::make('tukang1234'),
+                'email_verified_at' => Carbon::now()->toDateTimeString(),
                 'role_id' => 2
             ],
         ];
